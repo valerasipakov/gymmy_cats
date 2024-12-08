@@ -82,10 +82,15 @@ WSGI_APPLICATION = 'gymmy_cats.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'user_a_21_22',  # Замените на имя вашей базы данных
+        'USER': 'admin',      # Замените на имя пользователя
+        'PASSWORD': 'admin123',  # Замените на пароль
+        'HOST': '0.0.0.0',          # Имя сервиса в docker-compose или IP-адрес контейнера
+        'PORT': '5432',
     }
 }
+
 
 
 # Password validation

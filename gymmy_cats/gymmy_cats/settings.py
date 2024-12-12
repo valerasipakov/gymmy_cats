@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'gymmy_cats.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'user_a_21_22',
+        'NAME': 'gymmy_cats_db',
         'USER': 'admin',
         'PASSWORD': 'admin123',
         'HOST': '0.0.0.0',

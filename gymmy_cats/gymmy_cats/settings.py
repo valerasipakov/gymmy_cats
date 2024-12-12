@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-vxn7^q@*y@1cev9+-cr+1w4r0m7d(3c)qbie9s%gqi(av$#opk'
+SECRET_KEY = 'django-insecure-l5sqj!vk&m=7n54ik$ejw+5&0-#w#mn6pbd2yn84hsntm)4@gx'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,10 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'homepage.apps.HomepageConfig',
-    'user_profile.apps.UserProfileConfig',
-    'ivents.apps.IventsConfig',
-    'subscription.apps.SubscriptionConfig',
 ]
 
 MIDDLEWARE = [
@@ -51,7 +47,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
 ]
 
 ROOT_URLCONF = 'gymmy_cats.urls'
@@ -83,14 +78,13 @@ WSGI_APPLICATION = 'gymmy_cats.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'user_a_21_22',  # Замените на имя вашей базы данных
-        'USER': 'admin',      # Замените на имя пользователя
-        'PASSWORD': 'admin123',  # Замените на пароль
-        'HOST': '0.0.0.0',          # Имя сервиса в docker-compose или IP-адрес контейнера
-        'PORT': '5432',
+        'NAME': 'user_a_21_22',
+        'USER': 'admin',
+        'PASSWORD': 'admin123',
+        'HOST': '0.0.0.0',
+        'PORT': '5432'
     }
 }
-
 
 
 # Password validation
@@ -132,8 +126,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / 'static_dev',
-] 
+    BASE_DIR / 'static'
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
